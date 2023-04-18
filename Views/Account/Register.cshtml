@@ -1,0 +1,37 @@
+﻿@model MyCommune.Models.ViewModel.Account.RegistrationModel
+
+<div class="card">
+    <div class="card-header">
+        Register
+    </div>
+    <div class="card-body">
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div class="row">
+                <label asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="Name" asp-for="Name">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <label asp-for="Email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="Email" asp-for="Email">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <label asp-for="Mobile" class="col-sm-2 col-form-label">Mobile</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" placeholder="Mobile" asp-for="Mobile">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <label asp-for="Password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Password" asp-for="Password">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            <div asp-validation-summary="All"></div>
+        </form>
+    </div>
+</div>
